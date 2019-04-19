@@ -1,0 +1,25 @@
+﻿@model WebApplication3.ViewModels.AuthLogin
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Welcome To Our Login Page</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+
+    <div>
+        @Html.LabelFor(x => x.Username)
+        @Html.EditorFor(x => x.Username)
+    </div>
+
+    <div>
+        @Html.LabelFor(x => x.Password)
+        @Html.EditorFor(x => x.Password)
+    </div>
+
+    <input type="submit" value="Login"/>
+}
+

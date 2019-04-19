@@ -1,0 +1,36 @@
+﻿@model WebApplication3.Models.VeriListele
+@{
+       ViewBag.Title = "VeriListele";
+}
+
+
+
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                
+                <th scope="col">Number</th>
+                <th scope="col">Name</th>
+                <th scope="col">Surname</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var err in Model.ErrorList)
+            {
+                
+                <tr>
+                    <td>@err.Number</td>
+                    <td>@err.Name</td>
+                    <td>@err.Surname</td>
+                </tr>
+            }
+
+
+
+        </tbody>
+    </table>
+   
+
+</div>

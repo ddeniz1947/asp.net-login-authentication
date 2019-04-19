@@ -1,0 +1,42 @@
+﻿@model WebApplication3.ViewModels.RegisterLog
+@using System.Data.SqlClient
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+
+   
+    <div>
+        @Html.LabelFor(x => x.Number)
+        @Html.EditorFor(x => x.Number)
+    </div>
+
+    <div>
+        @Html.LabelFor(x => x.Name)
+        @Html.EditorFor(x => x.Name)
+    </div>
+
+    <div>
+        @Html.LabelFor(x => x.SurName)
+        @Html.EditorFor(x => x.SurName)
+    </div>
+
+    <div>
+        @Html.LabelFor(x => x.Email)
+        @Html.EditorFor(x => x.Email)
+    </div>
+
+    <div>
+        @Html.LabelFor(x => x.Password)
+        @Html.EditorFor(x => x.Password)
+    </div>
+
+    <div>
+        <input type="submit" value="Register" />
+    </div>
+}
